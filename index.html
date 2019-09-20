@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <!-- Meta Information -->
+        <meta charset="UTF-8">
+        <title>RamZone</title>
+        <link rel="icon" href="./images/logo.png">
+
+        <!-- Stylesheet -->
+        <link href="styles.css" rel="stylesheet" type="text/css">
+
+        <!-- JS Sources -->
+        <script src="./js/jquery-3.2.1.js"></script>
+        <script src="./js/jquery-rotation.js"></script>
+        <script src="./js/jquery-ui.min.js"></script>
+        <script src="./js/sha-512.js"></script>
+        <script src="./js/RamZone.js"></script>
+    </head>
+
+    <body>
+        <!-- Sitewide Navigation Bar -->
+        <div class="siteNavigationBar">
+            <a><div class="siteNavigationBar__pageLink siteNavigationBar__pageLink__active"><h1>All</h1></div></a>
+            <a><div class="siteNavigationBar__pageLink siteNavigationBar__pageLink__inactive"><h1>General</h1></div></a>
+            <a><div class="siteNavigationBar__pageLink siteNavigationBar__pageLink__inactive"><h1>Classes</h1></div></a>
+            <a><div class="siteNavigationBar__pageLink siteNavigationBar__pageLink__inactive"><h1>Professors</h1></div></a>
+            <a><div class="siteNavigationBar__pageLink siteNavigationBar__pageLink__inactive"><h1>Athletics</h1></div></a>
+
+            <!-- Search bar -->
+            <input class="siteNavigationBar__search" type="text" placeholder="search for something...">
+            <input class="siteNavigationBar__searchButton" type="button" value="search">
+        </div>
+
+        <!-- Utility Panel Collapser -->
+        <div class="utilityPanel__collapser">
+            <div class="utilityPanel__collapser__logo"><img class="utilityPanel__collapser__logo__img" src="./images/logo.png"></div>
+            <p class="utilityPanel__collapser__text">RamZone</p>
+            <img class="utilityPanel__collapser__arrow" src="./images/expand-lines.png">
+        </div>
+
+        <!-- Utility Panel -->
+        <div class="utilityPanel">
+
+            <!-- Option Block for sorting -->
+            <div class="utilityPanel__optionBlock sortBlock">
+                <div id="hot" class="utilityPanel__optionBlock__option utilityPanel__optionBlock__option__inactive">
+                        <div class="utilityPanel__optionBlock__option__icon"><img class="icon hot" src="./images/hot.png"></div>
+                        <p>Hot</p>
+                        <div class="utilityPanel__optionBlock__option__icon__collapsed"><img class="icon hot" src="./images/hot.png"></div>
+                </div>
+                <div id="new" class="utilityPanel__optionBlock__option utilityPanel__optionBlock__option__active">
+                        <div class="utilityPanel__optionBlock__option__icon"><img class="icon new" src="./images/new.png"></div>
+                        <p>New</p>
+                        <div class="utilityPanel__optionBlock__option__icon__collapsed"><img class="icon new" src="./images/new.png"></div>
+                </div>
+            </div>
+
+            <!-- Option Block for viewing your own posts, comments, etc. -->
+            <div class="utilityPanel__optionBlock accountBlock">
+                <p class="utilityPanel__optionBlock__header usernameHeader">MY ACCOUNT</p>
+                <div id="myPosts" class="utilityPanel__optionBlock__option utilityPanel__optionBlock__option__inactive">
+                        <div class="utilityPanel__optionBlock__option__icon"><img class="icon posts" src="./images/posts.png"></div>
+                        <p>Posts</p>
+                        <div class="utilityPanel__optionBlock__option__icon__collapsed"><img class="icon posts" src="./images/posts.png"></div>
+                </div>
+                <!-- <div id="myComments" class="utilityPanel__optionBlock__option utilityPanel__optionBlock__option__inactive">
+                        <div class="utilityPanel__optionBlock__option__icon"><img class="icon comments" src="./images/comments.png"></div>
+                        <p>Comments</p>
+                        <div class="utilityPanel__optionBlock__option__icon__collapsed"><img class="icon comments" src="./images/comments.png"></div>
+                </div>
+                <div class="utilityPanel__optionBlock__option utilityPanel__optionBlock__option__inactive">
+                        <div class="utilityPanel__optionBlock__option__icon"><img class="icon saved" src="./images/saved.png"></div>
+                        <p>Saved</p>
+                        <div class="utilityPanel__optionBlock__option__icon__collapsed"><img class="icon saved" src="./images/saved.png"></div>
+                </div> -->
+            </div>
+
+            <div class="utilityPanel__optionBlock logoutBlock">
+                <input class="utilityPanel__optionBlock__accountButton logout" type="button" value="Logout">
+            </div>
+
+            <!-- Login and account creation utility -->
+            <div class="utilityPanel__optionBlock loginBlock">
+                <!-- Login form -->
+                <p class="utilityPanel__optionBlock__header">LOGIN</p>
+                    <input class="utilityPanel__optionBlock__username utilityPanel__optionBlock__input" type="text" placeholder="username">
+                    <input class="utilityPanel__optionBlock__password utilityPanel__optionBlock__input" type="password" placeholder="password">
+                    <input class="utilityPanel__optionBlock__accountButton login" type="button" value="Login">
+            </div>
+
+            <div class="utilityPanel__optionBlock createAccountBlock">
+                <!-- Create account form -->
+                <p class="utilityPanel__optionBlock__header">CREATE AN ACCOUNT</p>
+                    <input class="utilityPanel__optionBlock__newUsername utilityPanel__optionBlock__input" type="text" placeholder="username">
+                    <input class="utilityPanel__optionBlock__email utilityPanel__optionBlock__input" type="text" placeholder="UNC email">
+                    <input class="utilityPanel__optionBlock__newPassword utilityPanel__optionBlock__input" type="password" placeholder="password">
+                    <input class="utilityPanel__optionBlock__confirmNewPassword utilityPanel__optionBlock__input" type="password" placeholder="confirm password">
+                    <input class="utilityPanel__optionBlock__accountButton signup" type="button" value="Create Account">
+            </div>
+        </div>
+
+        <!-- Content (container for posts) -->
+        <div class="content">
+
+            <!-- Description of the posts being displayed here -->
+            <p class="content__header">NEW posts in ALL</p>
+
+            <!-- Example of a post. Note that these are now created dynamically from RamZone.js -->
+            <!-- (eventually after pulling information from the database). -->
+
+            <!-- <div class="content__post">
+                <div class="content__post__votes">
+                    <img class="content__post__votes__arrow content__post__votes__arrow__inactive up" src="./images/vote.png">
+                    <p class="content__post__votes__count">0</p>
+                    <img class="content__post__votes__arrow content__post__votes__arrow__inactive down" src="./images/vote.png">
+                </div>
+                <div class="content__post__image">
+                    <img class="content__post__image__icon" src="./images/logo.png">
+                </div>
+                <div class="content__post__textContent">
+                    <div class="content__post__textContent__title">
+                        <p>A title of a post yayy...</p>
+                    </div>
+                    <div class="content__post__textContent__details">
+                        <p>submitted 5 hours ago by <a>jay</a> to <a>General</a></p>
+                    </div>
+                    <div class="content__post__textContent__options">
+                        <a class="option comments">10 comments</a><a class="option">save</a><a class="option">report</a><a class="option">share</a>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Navigator -->
+            <p class="content__navigator prev">prev</p><p class="content__navigator next">next</p>
+
+        </div>
+
+        <!-- Information Pane -->
+        <div class="infoPane">
+
+            <!-- Submit post form -->
+            <input class="infoPane__submitButton" type="button" value="Submit a Post">
+            <div class="infoPane__submitForm">
+                <input class="infoPane__submitForm__title infoPane__submitForm__input" type="text" placeholder="Title of your post">
+                <textarea class="infoPane__submitForm__content infoPane__submitForm__input" placeholder="Content of your post (optional)"></textarea>
+                <input class="infoPane__submitForm__thumnailLink infoPane__submitForm__input" type="text" placeholder="image link (optional)">
+                <select class="infoPane__submitForm__select">
+                    <option value="General">General</option>
+                    <option value="Classes">Classes</option>
+                    <option value="Athletics">Athletics</option>
+                    <option value="Professors">Professors</option>
+                </select>
+                <input class="infoPane__submitForm__postButton" type="button" value="Post">
+            </div>
+
+            <!-- Welcome Block -->
+            <div class="infoPane__infoBlock">
+                <p class="infoPane__infoBlock__header">Welcome to RamZone!</p>
+                <div class="infoPane__infoBlock__content">
+                    <div class="infoPane__infoBlock__content__image"><img src="./images/logo.png"></div>
+                    <p class="infoPane__infoBlock__content__text">This is a site where you can ask any questions pertaining to UNC!</p>
+                </div>
+            </div>
+
+            <!-- Template Info Block -->
+            <div class="infoPane__infoBlock">
+                    <p class="infoPane__infoBlock__header">Advertisement</p>
+                    <div class="infoPane__infoBlock__content">
+                        <a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1592023" target="_blank"><div class="infoPane__infoBlock__content__image advertisement__image"><img src="./images/kmp.jpg"></div></a>
+                        <a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1592023" target="_blank" class="advertisement__text"><p class="infoPane__infoBlock__content__text advertisement__text">RATE MEEEE</p></a>
+                    </div>
+                </div>
+        </div>
+
+    </body>
+
+</html>

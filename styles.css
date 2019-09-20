@@ -1,0 +1,1062 @@
+@charset "UTF-8";
+
+/* div.content__post[search=false]{
+	display: none;
+} */
+
+body {
+	/* Size */
+	width: 100%;
+    height: 100%;
+
+	/* Position and Display */
+	text-align: center;
+
+	/* Color */
+	background-color: #d7edff;
+}
+
+.siteNavigationBar {
+    /* Size */
+	width: 100%;
+    height: 35px;
+
+    /* Position and Display */
+    position: fixed;
+    text-align: left;
+    top: 0px;
+    left: 250px;
+    z-index: 100;
+
+    /* Border and Padding */
+    padding: none;
+    border-bottom: 3px solid #0e66ad;
+
+    /* Text */
+
+    /* Color */
+    background-color: #127cd3;
+}
+        .siteNavigationBar__search {
+            /* Size */
+            width: 20%;
+
+            /* Display and Position */
+            display: inline-block;
+            margin-left: 2%;
+            margin-right: 0px;
+
+            /* Border and Padding */
+            padding: 5px 10px;
+            border: 1px solid #306481;
+            border-radius: 0px;
+
+            /* Text */
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #ffffff;
+            text-overflow: auto;
+
+            /* Color */
+            background-color: #18548136;
+        }
+            .siteNavigationBar__search::-webkit-input-placeholder {
+                color: #a4c6e2;
+            }
+            .siteNavigationBar__search::-moz-placeholder {
+                color: #a4c6e2;
+            }
+
+        .siteNavigationBar__searchButton {
+            display: inline-block;
+            background-color: #80b9e236;
+            border: 1px solid #306481;
+            border-left: none;
+            border-radius: 0px;
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 5px 8px;
+            margin-left: -4px;
+            text-decoration: none;
+        }
+            .siteNavigationBar__searchButton:hover {
+                background-color: #9ec5e04d;
+                cursor: pointer;
+            }
+
+        .siteNavigationBar__pageLink {
+            /* Size */
+            width: 100px;
+            height: 100%;
+
+            /* Position and Display */
+            display: inline-block;
+            position: relative;
+            top: 0px;
+            z-index: 101;
+
+            /* Border and Padding */
+            /* padding: 5px; */
+            border-right: 0px solid #afc7da;
+
+            /* Text */
+            text-align: center;
+
+            /* Color */
+            background-color: #127cd3;
+        }
+
+        .siteNavigationBar__pageLink:hover {
+            /* Cursor */
+            cursor: pointer;
+
+            /* Text */
+            color: #ffffff;
+        }
+
+        .siteNavigationBar__pageLink h1 {
+            /* Text */
+            text-align: center;
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .siteNavigationBar__pageLink__inactive {
+            /* Text */
+            color: #a6c4e6;
+        }
+
+        .siteNavigationBar__pageLink__active {
+            /* Text */
+            color: #ffffff;
+
+            /* Border and Padding */
+            border-bottom: 3px solid #74c77b;
+        }
+
+.utilityPanel {
+    /* Size */
+	width: 250px;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    /* Position and Display */
+    position: fixed;
+    text-align: left;
+    top: 35px;
+    left: 0px;
+    z-index: 90;
+
+    /* Border and Padding */
+    padding: 0px;
+
+    /* Color */
+    background-color: #0b4779;
+}
+        .utilityPanel__collapser {
+            /* Size */
+            width: 250px;
+            height: 35px;
+
+            /* Position and Display */
+            position: fixed;
+            display: table;
+            top: 0px;
+            left: 0px;
+            z-index: 91;
+
+            /* Border and Padding */
+            /* padding: 5px; */
+            border-bottom: 3px solid #115385;
+
+            /* Text */
+            text-align: center;
+
+            /* Color */
+            background-color: #18619c;
+        }
+            .utilityPanel__collapser__logo {
+                /* Position and Display */
+                z-index: 92;
+                display: table-cell;
+                vertical-align: middle;
+                padding-left: 6px;
+                padding-top: 4px;
+            }
+                .utilityPanel__collapser__logo__img {
+                    /* Size */
+                    width: 26px;
+                    height: 26px;
+                }
+            .utilityPanel__collapser__text {
+                /* Text */
+                text-align: center;
+                font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+
+                /* Position and Display */
+                z-index: 92;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: left;
+                padding-left: 3px;
+
+                /* Color */
+                color: #ffffff;
+            }
+            .utilityPanel__collapser__arrow {
+                /* Size */
+                width: 20px;
+                height: 20px;
+
+                /* Position and Display */
+                z-index: 92;
+                float: right;
+
+                /* Border and Padding */
+                padding: 7px 10px 7px 7px;
+            }
+
+            .utilityPanel__collapser__arrow:hover {
+                /* Image */
+                content: url("./images/expand-lines-hover.png");
+            }
+
+        .utilityPanel__collapser:hover {
+            /* Cursor */
+            cursor: pointer;
+
+            /* Color */
+            background-color: #2775b1;
+        }
+
+        .utilityPanel__optionBlock {
+            /* Size */
+            width: 250px;
+            height: auto;
+            overflow: hidden;
+
+            /* Position and Display */
+            display: block;
+            text-align: left;
+            z-index: 91;
+            margin: auto;
+
+            /* Border and Padding */
+            padding: 0px;
+            border-bottom: 1px solid #487697;
+
+            /* Text */
+            text-align: center;
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 15px;
+            font-weight: 100;
+
+            /* Color */
+            color: #ffffff;
+        }
+
+        .utilityPanel__optionBlock__header {
+            /* Text */
+            text-align: left;
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+
+            /* Border and Padding */
+            padding-left: 20px;
+
+            /* Color */
+            color: #b9cee0;
+        }
+
+        .utilityPanel__optionBlock__option {
+            /* Size */
+            width: 230px;
+            height: 40px;
+            overflow-x: hidden;
+
+            /* Position and Display */
+            display: table;
+            text-align: left;
+            z-index: 91;
+            margin: none;
+
+            /* Border and Padding */
+            padding-left: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-bottom: 0px solid #487697;
+        }
+
+        .utilityPanel__optionBlock__option__inactive {
+            /* Text */
+            color: #719ebe;
+        }
+
+        .utilityPanel__optionBlock__option__active {
+            /* Text */
+            color: #ffffff;
+
+            /* Border and Padding */
+            border-right: 0px solid #74c77b;
+        }
+
+        .utilityPanel__optionBlock__option:hover {
+            /* Text */
+            color: #ffffff;
+
+            /* Border and Padding */
+            /* border-left: 2px solid #74c77b;
+            padding-left: 18px; */
+
+            /* Cursor */
+            cursor: pointer;
+
+            /* Color */
+            background-color: #1c7ec065;
+        }
+
+        .utilityPanel__optionBlock__option__text {
+            /* Position and Display */
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .utilityPanel__optionBlock__option__icon {
+            /* Size */
+            width: 15px;
+            height: 15px;
+
+            /* Position and Display */
+            display: table-cell;
+            vertical-align: middle;
+            padding-right: 15px;
+        }
+            .utilityPanel__optionBlock__option__icon > img {
+                /* Size */
+                width: 15px;
+                height: 15px;
+            }
+
+        .utilityPanel__optionBlock__option__icon__collapsed {
+            /* Size */
+            width: 15px;
+            height: 15px;
+
+            /* Position and Display */
+            display: table-cell;
+            vertical-align: middle;
+            padding-right: 10px;
+
+            /* Visibility */
+            opacity: 0;
+        }
+            .utilityPanel__optionBlock__option__icon__collapsed > img {
+                /* Size */
+                width: 15px;
+                height: 15px;
+            }
+
+        .utilityPanel__optionBlock__input {
+            /* Size */
+            width: 70%;
+
+            /* Display and Position */
+            display: block;
+            margin: 15px auto auto auto;
+
+            /* Border and Padding */
+            padding: 5px 10px;
+            border: 1px solid #306481;
+            border-radius: 0px;
+
+            /* Text */
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(186, 213, 235);
+            text-overflow: auto;
+            font-size: 14px;
+            font-weight: 400;
+
+            /* Color */
+            background-color: #18548136;
+        }
+            .utilityPanel__optionBlock__input::-webkit-input-placeholder {
+                color: #538cb9;
+            }
+            .utilityPanel__optionBlock__input::-moz-placeholder {
+                color: #538cb9;
+            }
+
+        .utilityPanel__optionBlock__accountButton {
+            display: block;
+            margin: 15px auto 15px auto;
+            background-color: #0f6bb6;
+            border: none;
+            border-bottom: 3px solid #073563;
+            border-radius: 0px;
+            width: 60%;
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #bfe2fd;
+            font-size: 15px;
+            padding: 5px 8px;
+            text-decoration: none;
+        }
+            .utilityPanel__optionBlock__accountButton:hover {
+                background-color: #197cc4;
+                cursor: pointer;
+            }
+
+        .logoutBlock {
+            /* Display */
+            display: none;
+        }
+
+.content {
+    /* Size */
+	width: 90%;
+    height: 93%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    /* Position and Display */
+    position: fixed;
+    display: inline-block;
+    text-align: left;
+    top: 35px;
+    left: 250px;
+    z-index: 80;
+
+    /* Border and Padding */
+    padding: 5px 10px 10px 10px;
+
+    /* Color */
+    /* background-color: #b8ddff; */
+}
+    .content__header {
+        /* Text */
+        text-align: left;
+        font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+
+        /* Border and Padding */
+        padding-left: 20px;
+
+        /* Color */
+        color: #8aaac4;
+    }
+    .content__post {
+        /* Size */
+        width: 62%;
+        height: 90px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+
+        /* Position and Display */
+        display: table;
+        text-align: left;
+        z-index: 81;
+
+        /* Border and Padding */
+        padding: 10px 10px 16px 10px;
+        /* border: 1px solid #488cc0; */
+
+        /* Color */
+        /* background-color: #b8ddff; */
+    }
+    .content__post:hover {
+        /* Color */
+        /* background-color: #b8ddff; */
+        background-color: #cbe8fa;
+    }
+        .content__post__votes {
+            /* Size */
+            width: 20px;
+            height: 70px;
+
+            /* Position and Display */
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            z-index: 81;
+
+            /* Border and Padding */
+            padding: 8px;
+            border: 0px solid #488cc0;
+
+            /* Color */
+            /* background-color: #b8ddff; */
+        }
+            .content__post__votes__arrow {
+                /* Size */
+                width: 20px;
+                height: 15px;
+
+                /* Position and Display */
+                display: block;
+                z-index: 81;
+                margin: auto;
+
+                /* Border and Padding */
+                padding: 0x;
+                border: 0px solid #488cc0;
+            }
+                .content__post__votes__arrow__active {
+                    content: url("./images/voted.png");
+                }
+                .content__post__votes__arrow__inactive {
+                    content: url("./images/vote.png");
+                }
+                .content__post__votes__arrow:hover {
+                    /* Cursor */
+                    cursor: pointer;
+                }
+                .down {
+                    /* Transform */
+                    transform: rotate(180deg);
+                }
+            .content__post__votes__count {
+                /* Text */
+                text-align: center;
+                font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+
+                /* Border and Padding */
+                padding-left: 0px;
+
+                /* Color */
+                color: #295f88;
+            }
+
+        .content__post__image {
+            /* Size */
+            width: 70px;
+            height: 70px;
+
+            /* Position and Display */
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            position: relative;
+            z-index: 81;
+
+            /* Border and Padding */
+            padding: 8px;
+            /* border: 1px solid #488cc0; */
+
+            /* Color */
+            /* background-color: #b8ddff; */
+        }
+            .content__post__image:hover {
+                /* Cursor */
+                cursor: pointer;
+            }
+            .content__post__image__icon {
+                /* Size */
+                width: inherit;
+                height: inherit;
+            }
+
+        .content__post__textContent {
+            /* Size */
+            width: 600px;
+            height: 70px;
+
+            /* Position and Display */
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            position: relative;
+            z-index: 81;
+
+            /* Border and Padding */
+            padding: 0px 8px 18px 8px;
+            margin-left: 0px;
+            /* border: 1px solid #488cc0; */
+
+            /* Color */
+            /* background-color: #b8ddff; */
+        }
+            .content__post__textContent__title {
+                /* Text */
+                text-align: left;
+                font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+
+                /* Border and Padding */
+                padding-left: 10px;
+
+                /* Color */
+                color: #295f88;
+            }
+            .content__post__textContent__title:hover {
+                /* Cursor */
+                cursor: pointer;
+            }
+            .content__post__textContent__content {
+                /* Text */
+                text-align: left;
+                font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+
+                /* Border and Padding */
+                padding-left: 10px;
+
+                /* Color */
+                color: #566977;
+
+                /* Display */
+                display: none;
+            }
+            .content__post__textContent__details {
+                /* Text */
+                text-align: left;
+                font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 10px;
+                font-weight: 200;
+
+                /* Border and Padding */
+                padding-left: 10px;
+
+                /* Color */
+                color: #488cc0;
+            }
+            .content__post__textContent__options {
+                /* Text */
+                text-align: left;
+                font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 10px;
+                font-weight: 300;
+
+                /* Border and Padding */
+                padding-left: 10px;
+
+                /* Color */
+                color: #4e6474;
+            }
+                .option {
+                    margin-right: 10px;
+                }
+
+                .option:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
+        .content__post__commentForm {
+            /* Size */
+            width: 80%;
+            height: auto;
+
+            /* Position and Display */
+            display: none;
+            text-align: left;
+            z-index: 90;
+            margin-left: 50px;
+            display: none;
+
+            /* Border and Padding */
+            /* padding: 15px 10px 10px 10px; */
+            /* border-left: 3px solid #0e66ad; */
+            border-bottom: 1px dashed rgb(73, 100, 122);
+
+            /* Color */
+            /* background-color: #127cd3; */
+            /* background-color: #96cbfa; */
+        }
+            .content__post__commentForm__input {
+                /* Size */
+                width: 90%;
+
+                /* Display and Position */
+                display: block;
+                margin-top: 15px;
+                margin-bottom: 15px;
+
+                /* Border and Padding */
+                padding: 5px 10px;
+                border: 1px solid #306481;
+                border-radius: 0px;
+
+                /* Text */
+                font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: #1e486b;
+                text-overflow: auto;
+                font-size: 14px;
+                font-weight: 400;
+
+                /* Color */
+                background-color: #18558111;
+            }
+                .content__post__commentForm__input::-webkit-input-placeholder {
+                    color: #386e9b;
+                }
+                .content__post__commentForm__input::-moz-placeholder {
+                    color: #386e9b;
+                }
+            .content__post__commentForm__content {
+                height: 100px;
+            }
+
+            .content__post__commentForm__commentButton {
+                display: block;
+                background-color: #127cd3;
+                border: none;
+                border-bottom: 3px solid #306481;
+                border-radius: 0px;
+                width: 20%;
+                font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: #ffffff;
+                font-size: 15px;
+                padding: 5px 8px;
+                text-decoration: none;
+                margin-bottom: 15px;
+            }
+                .content__post__commentForm__commentButton:hover {
+                    background-color: #2389d6;
+                    cursor: pointer;
+                }
+
+        .content__post__comments {
+            /* Size */
+            width: 600px;
+            height: 70px;
+
+            /* Position and Display */
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            position: relative;
+            display: none;
+            z-index: 81;
+
+            /* Border and Padding */
+            padding: 0px 8px 18px 8px;
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+            .content__post__comments__comment {
+                /* Text */
+                text-align: left;
+                font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                word-wrap: wrap;
+
+                /* Border and Padding */
+                padding-left: 10px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                border-left: 2px solid #3c7592;
+
+                /* Display */
+                margin-bottom: 15px;
+            }
+            .content__post__comments__comment:hover {
+                border-left: 3px solid #244f64;
+                padding-left: 9px;
+            }
+                .content__post__comments__comment__text {
+                    /* Color */
+                    color: #566977;
+
+                    /* Font */
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                .content__post__comments__comment__user {
+                    /* Color */
+                    color: #32373b;
+
+                    /* Font */
+                    font-size: 10px;
+                    font-weight: 200;
+
+                    /* Border and Padding */
+                    padding-left: 15px;
+                }
+
+    .content__navigator {
+        /* Text */
+        text-align: left;
+        font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        /* display: inline-block; */
+        display: none;
+
+        /* Border and Padding */
+        padding-left: 10px;
+
+        /* Color */
+        color: #4e6474;
+    }
+        .content__navigator:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .next {
+            float: right;
+            padding-right: 42%;
+        }
+
+.infoPane {
+    /* Size */
+    width: 25%;
+    height: 95%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* Position and Display */
+    position: fixed;
+    display: inline-block;
+    text-align: center;
+    top: 35px;
+    right: 0px;
+    z-index: 90;
+
+    /* Border and Padding */
+    padding: 15px 10px 10px 10px;
+    /* border-left: 3px solid #0e66ad; */
+    border-left: 1px dashed #649dc5;
+
+    /* Color */
+    /* background-color: #127cd3; */
+    background-color: #d7edff;
+}
+    .infoPane__submitButton {
+        display: block;
+        background-color: #127cd3;
+        border: none;
+        border-bottom: 3px solid #306481;
+        border-radius: 0px;
+        width: 80%;
+        font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #ffffff;
+        font-size: 15px;
+        padding: 5px 8px;
+        margin: auto;
+        text-decoration: none;
+    }
+        .infoPane__submitButton:hover {
+            background-color: #2389d6;
+            cursor: pointer;
+        }
+
+    .infoPane__submitForm {
+        /* Size */
+        width: 80%;
+        height: auto;
+
+        /* Position and Display */
+        display: none;
+        text-align: center;
+        z-index: 90;
+        margin: auto;
+
+        /* Border and Padding */
+        /* padding: 15px 10px 10px 10px; */
+        /* border-left: 3px solid #0e66ad; */
+        border-top: 1px solid #306481;
+        border-bottom: 3px solid #306481;
+
+        /* Color */
+        /* background-color: #127cd3; */
+        background-color: #96cbfa;
+    }
+        .infoPane__submitForm__input {
+            /* Size */
+            width: 80%;
+
+            /* Display and Position */
+            display: block;
+            margin: 15px auto auto auto;
+
+            /* Border and Padding */
+            padding: 5px 10px;
+            border: 1px solid #306481;
+            border-radius: 0px;
+
+            /* Text */
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #1e486b;
+            text-overflow: auto;
+            font-size: 14px;
+            font-weight: 400;
+
+            /* Color */
+            background-color: #18548136;
+        }
+            .infoPane__submitForm__input::-webkit-input-placeholder {
+                color: #386e9b;
+            }
+            .infoPane__submitForm__input::-moz-placeholder {
+                color: #386e9b;
+            }
+
+        .infoPane__submitForm__title {
+
+        }
+        .infoPane__submitForm__content {
+            height: 100px;
+        }
+        .infoPane__submitForm__thumbnailLink {
+
+        }
+
+        .infoPane__submitForm__select {
+            /* Size */
+            width: 80%;
+
+            /* Display and Position */
+            display: block;
+            margin: 15px auto auto auto;
+
+            /* Border and Padding */
+            padding: 5px 10px;
+            border: 1px solid #306481;
+            border-radius: 0px;
+
+            /* Text */
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #1e486b;
+            text-overflow: auto;
+            font-size: 14px;
+            font-weight: 400;
+
+            /* Color */
+            background: rgb(183, 223, 253);
+            color: rgb(80, 123, 160);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+            .infoPane__submitForm__select::-ms-expand {
+                display: none;
+            }
+            .infoPane__submitForm__select:hover,
+            .infoPane__submitForm__select:focus {
+                color: #386e9b;
+                background-color: #18548136;
+                cursor: pointer;
+            }
+            .infoPane__submitForm__select:disabled {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+
+        .infoPane__submitForm__postButton {
+            display: block;
+            background-color: #127cd3;
+            border: none;
+            border-bottom: 3px solid #306481;
+            border-radius: 0px;
+            width: 30%;
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #ffffff;
+            font-size: 15px;
+            padding: 5px 8px;
+            margin: 15px auto 15px auto;
+            text-decoration: none;
+        }
+            .infoPane__submitForm__postButton:hover {
+                background-color: #2389d6;
+                cursor: pointer;
+            }
+
+    .infoPane__infoBlock {
+        /* Size */
+        width: 80%;
+        height: auto;
+
+        /* Position and Display */
+        display: block;
+        text-align: center;
+        margin: auto;
+        z-index: 81;
+
+        /* Border and Padding */
+        padding: 10px;
+        border-bottom: 1px dashed #4a8dbd;
+
+        /* Color */
+        /* background-color: #b8ddff; */
+    }
+        .infoPane__infoBlock__header {
+            /* Text */
+            text-align: center;
+            font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+
+            /* Border and Padding */
+            /* padding-left: 20px; */
+
+            /* Color */
+            color: #174264;
+        }
+
+        .infoPane__infoBlock__content {
+            /* Position and Display */
+            display: block;
+            text-align: center;
+            margin: auto;
+            z-index: 81;
+
+            /* Border and Padding */
+            padding: 10px;
+        }
+            .infoPane__infoBlock__content__image {
+                /* Size */
+                width: 100%;
+                height: auto;
+
+                /* Position and Display */
+                margin: auto;
+                z-index: 81;
+
+                /* Border and Padding */
+                padding: 3px;
+                /* border: 1px solid #0b4779; */
+            }
+                .infoPane__infoBlock__content__image img {
+                    /* Size */
+                    width: 70%;
+                    height: auto;
+                }
+
+            .infoPane__infoBlock__content__text {
+                /* Text */
+                font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                word-wrap: auto;
+
+                /* Position and Display */
+                z-index: 92;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                padding-left: 3px;
+
+                /* Color */
+                color: #275e88;
+            }
+
+            .advertisement__text {
+                padding-top: 10px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 500;
+            }
+                .advertisement__text:hover {
+                    text-decoration: none;
+                    font-weight: 800;
+                    cursor: pointer;
+                }
